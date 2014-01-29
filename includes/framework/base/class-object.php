@@ -4,7 +4,8 @@
 */
 class Object
 {
-	
+	private $_prop=array();
+
 	public function __get($key){
 
 	}

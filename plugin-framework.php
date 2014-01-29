@@ -24,6 +24,7 @@
  * Domain Path:       /languages
  * GitHub Plugin URI: https://github.com/cherifGsoul/plugin_framework
  */
+define('CORE_PATH',dirname(__FILE__).'/includes/framework');
 
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
@@ -42,12 +43,9 @@ if ( ! defined( 'WPINC' ) ) {
  * - replace `class-plugin-framework.php` with the name of the plugin's class file
  *
  */
-require_once( plugin_dir_path( __FILE__ ) . 'public/class-plugin-framework.php' );
-require_once( plugin_dir_path( __FILE__ ) . 'includes/class-core.php' );
+require_once( plugin_dir_path( __FILE__ ) . 'includes/framework/class-core.php' );
+require_once(plugin_dir_path(__FILE__ ).'public/class-plugin-framework.php');
 spl_autoload_register(array('Core','autoload'));
-
-$ob=new Object();
-
 
 /*
  * Register hooks that are fired when the plugin is activated or deactivated.
