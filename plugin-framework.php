@@ -25,6 +25,7 @@
  * GitHub Plugin URI: https://github.com/cherifGsoul/plugin_framework
  */
 define('CORE_PATH',dirname(__FILE__).'/includes/framework');
+define('VENDORS',dirname(__FILE__).'/includes/vendors');
 
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
